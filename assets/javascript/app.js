@@ -1,7 +1,16 @@
+import PaddleLeft from "./paddleLeft.js"
+import PaddleRight from "./paddleRight.js"
+
 let canvas = document.getElementById("gamebox");
 
 let ctx = canvas.getContext("2d");
 
-ctx.fillRect(20, 150, 20, 100);
+const GAME_WIDTH = 800;
+const GAME_HEIGHT = 500;
 
-ctx.fillRect(760, 150, 20, 100)
+let paddleLeft = new PaddleLeft(GAME_WIDTH, GAME_HEIGHT);
+let paddleRight = new PaddleRight(GAME_WIDTH, GAME_HEIGHT);
+
+
+paddleLeft.draw(ctx);
+paddleRight.draw(ctx);
