@@ -1,14 +1,17 @@
-export default class PaddleLeft {
-    constructor(gameWidth, gameHeight) {
+export default class PaddleRight {
+    constructor(x, y) {
+        this.gameWidth = 800;
+        this.gameHeight = 500;
         this.width = 20;
         this.height = 100;
         this.position = {
-            x: this.width + 10,
-            y: gameHeight / 2 - this.height / 2
+            x: x,
+            y: y
         };
     };
 
     draw(ctx) {
+        ctx.fillStyle = "#FFF";
         ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
     };
 };
